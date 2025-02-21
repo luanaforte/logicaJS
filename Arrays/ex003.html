@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Acessando atributos de uma lista de objetos</h1>
+    <br>
+    <h2>
+        1) Crie uma lista de alunos com 10 objetos e exiba todos
+        <br><br>
+        2) Calcule a média de idades em um array de objetos
+    </h2>
+
+    <script>
+        // questão 01
+        let alunos = [
+            { nome: "João", idade: 20 },
+            { nome: "Maria", idade: 22 },
+            { nome: "José", idade: 21 },
+            { nome: "Ana", idade: 19 }
+        ]
+
+        // Usando um loop for para acessar e exibir todos os nomes
+        for (let i = 0; i < alunos.length; i++) {
+            console.log(alunos[i].nome);
+        }
+
+        // alunos.forEach(function (aluno) {
+        //     console.log(aluno.nome);
+        // })
+
+        // alunos.forEach(aluno => console.log(aluno.nome))
+
+
+
+        // questão 02
+        let alunos = [
+            { nome: "João", idade: 20 },
+            { nome: "Maria", idade: 22 },
+            { nome: "José", idade: 21 }
+        ]
+
+        let somaIdades = 0;
+        for (let i = 0; i < alunos.length; i++) {
+            somaIdades += alunos[i].idade;
+        }
+        let mediaIdade = somaIdades / alunos.length
+        console.log(`A média de idades é: ${mediaIdade}`)
+
+
+    </script>
+</body>
+
+</html>
